@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Productos</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background:#f4f6f9;
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            padding:20px;
+        }
+
+        .container{
+            width:100%;
+            max-width:900px;
+            background:white;
+            padding:30px;
+            border-radius:15px;
+            box-shadow:0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        h1{
+            text-align:center;
+            color:#333;
+            margin-bottom:10px;
+        }
+
+        .descripcion{
+            text-align:center;
+            color:#666;
+            margin-bottom:25px;
+        }
+
+        .formulario{
+            display:grid;
+            grid-template-columns:1fr 1fr auto auto;
+            gap:10px;
+            margin-bottom:30px;
+        }
+
+        input{
+            padding:12px;
+            border:1px solid #d1d5db;
+            border-radius:8px;
+            outline:none;
+            font-size:16px;
+        }
+
+        input:focus{
+            border-color:#2563eb;
+        }
+
+        button{
+            border:none;
+            padding:12px 18px;
+            border-radius:8px;
+            cursor:pointer;
+            color:white;
+            transition:.3s;
+        }
+
+        #btnAgregar{
+            background:#16a34a;
+        }
+
+        #btnAgregar:hover{
+            background:#15803d;
+        }
+
+        #btnSincronizar{
+            background:#2563eb;
+        }
+
+        #btnSincronizar:hover{
+            background:#1d4ed8;
+        }
+
+        ul{
+            list-style:none;
+        }
+
+        li{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            gap:10px;
+            padding:15px;
+            margin-bottom:10px;
+            border:1px solid #e5e7eb;
+            border-radius:10px;
+            background:#f9fafb;
+        }
+
+        .acciones{
+            display:flex;
+            gap:10px;
+        }
+
+        .btn-editar{
+            background:#f59e0b;
+        }
+
+        .btn-editar:hover{
+            background:#d97706;
+        }
+
+        .btn-eliminar{
+            background:#dc2626;
+        }
+
+        .btn-eliminar:hover{
+            background:#b91c1c;
+        }
+
+        @media(max-width:768px){
+
+            .formulario{
+                grid-template-columns:1fr;
+            }
+
+            li{
+                flex-direction:column;
+                align-items:flex-start;
+            }
+
+            .acciones{
+                width:100%;
+            }
+
+            .acciones button{
+                flex:1;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Gestión de Productos</h1>
+
+        <p class="descripcion">
+            Administra productos, almacena información localmente y sincroniza los datos con la API.
+        </p>
+
+        <div class="formulario">
+
+            <input
+                type="text"
+                id="nombreProducto"
+                placeholder="Nombre del producto"
+            >
+
+            <input
+                type="number"
+                id="precioProducto"
+                placeholder="Precio"
+            >
+
+            <button id="btnAgregar">
+                Agregar Producto
+            </button>
+
+            <button id="btnSincronizar">
+                Sincronizar API
+            </button>
+
+        </div>
+
+        <ul id="listaProductos"></ul>
+
+    </div>
+
+    <script src="app1.js"></script>
+
+</body>
+</html>

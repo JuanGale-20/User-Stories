@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema Interactivo</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background:linear-gradient(135deg,#667eea,#764ba2);
+    }
+
+    .container{
+      width:90%;
+      max-width:500px;
+      background:white;
+      padding:40px;
+      border-radius:15px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.2);
+      text-align:center;
+    }
+
+    h1{
+      color:#333;
+      margin-bottom:15px;
+    }
+
+    p{
+      color:#666;
+      margin-bottom:25px;
+      line-height:1.5;
+    }
+
+    .info{
+      background:#f4f4f4;
+      padding:15px;
+      border-radius:10px;
+      margin-top:20px;
+      color:#555;
+    }
+
+    button{
+      background:#667eea;
+      color:white;
+      border:none;
+      padding:12px 25px;
+      border-radius:8px;
+      cursor:pointer;
+      font-size:16px;
+      transition:0.3s;
+    }
+
+    button:hover{
+      background:#5568d8;
+      transform:translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Sistema Interactivo</h1>
+
+    <p>
+      Este sistema solicitará tu nombre y edad mediante ventanas emergentes
+      para determinar si eres menor o mayor de edad.
+    </p>
+
+    <button onclick="location.reload()">
+      Iniciar Sistema
+    </button>
+
+    <div class="info">
+      <strong>Tecnologías utilizadas:</strong><br>
+      JavaScript • Variables • Condicionales • Prompt • Alert
+    </div>
+  </div>
+
+  <script src="sistema_interactivo.js"></script>
+
+</body>
+</html>

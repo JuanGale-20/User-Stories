@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Datos</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f4f4f4;
+      padding: 30px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .card {
+      background-color: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .card h2 {
+      margin-bottom: 15px;
+      color: #444;
+    }
+
+    .item {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .item:last-child {
+      border-bottom: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>Gestión de Datos</h1>
+
+    <section class="card">
+      <h2>Productos</h2>
+      <div id="productos"></div>
+    </section>
+
+    <section class="card">
+      <h2>Set de Números Únicos</h2>
+      <div id="set"></div>
+    </section>
+
+    <section class="card">
+      <h2>Categorías y Productos</h2>
+      <div id="map"></div>
+    </section>
+
+  </div>
+
+  <script src="gestion_datos.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Notas</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#f4f6f9;
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:20px;
+    }
+
+    .container{
+      width:100%;
+      max-width:700px;
+      background:#fff;
+      padding:30px;
+      border-radius:12px;
+      box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    }
+
+    h1{
+      text-align:center;
+      margin-bottom:10px;
+      color:#333;
+    }
+
+    p{
+      text-align:center;
+      color:#666;
+      margin-bottom:25px;
+    }
+
+    .formulario{
+      display:flex;
+      gap:10px;
+      margin-bottom:25px;
+    }
+
+    input{
+      flex:1;
+      padding:12px;
+      border:1px solid #ccc;
+      border-radius:8px;
+      outline:none;
+      font-size:16px;
+    }
+
+    input:focus{
+      border-color:#2563eb;
+    }
+
+    button{
+      padding:12px 20px;
+      border:none;
+      border-radius:8px;
+      background:#2563eb;
+      color:white;
+      cursor:pointer;
+      transition:.3s;
+    }
+
+    button:hover{
+      background:#1d4ed8;
+    }
+
+    ul{
+      list-style:none;
+    }
+
+    li{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:12px;
+      margin-bottom:10px;
+      border-radius:8px;
+      background:#f8fafc;
+      border:1px solid #e5e7eb;
+    }
+
+    li button{
+      background:#dc2626;
+      padding:8px 12px;
+    }
+
+    li button:hover{
+      background:#b91c1c;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>Lista de Notas</h1>
+
+    <p>
+      Escribe una nota y presiona Agregar para guardarla.
+    </p>
+
+    <div class="formulario">
+      <input
+        type="text"
+        id="inputNota"
+        placeholder="Escribe una nota"
+      >
+
+      <button id="btnAgregar">
+        Agregar
+      </button>
+    </div>
+
+    <ul id="listaNotas"></ul>
+
+  </div>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
